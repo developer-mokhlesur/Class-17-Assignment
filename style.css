@@ -1,0 +1,96 @@
+/*** Nessesary CSS */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 1300px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+img{
+    max-width: 100%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.text-start{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-end{
+    text-align: right;
+}
+.ul{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+/*** Header Section ***/
+.header{
+    background: #000;   
+}
+.header-left{
+    width: 20%;
+}
+.header-left img {
+    width: 105px;
+    padding: 10px 0;
+}
+.header-right{
+    width: 80%;
+}
+.header-right ul li{
+    display: inline-block;
+    position: relative;
+}
+.header-right ul li a {
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 71px;
+    position: relative;
+}
+.header-right ul li a:hover{}
+.header-right ul li a::after{
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 20%;
+    height: 3px;
+    width: 0;
+    background: #fff;
+    transition: 0.5s;
+}
+.header-right ul li a:hover::after{
+    width: 60%;
+}
+.header-right ul li ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background: #000;
+    text-align: left;
+    line-height: normal;
+}
+.header-right ul li ul{}
+.header-right ul li ul li{
+    line-height: normal;
+    display: block;
+}
