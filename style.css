@@ -1,4 +1,4 @@
-/*** Nessesary CSS */
+/****** Nessesary CSS ******/
 *{
     margin: 0;
     padding: 0;
@@ -6,91 +6,378 @@
     box-sizing: border-box;
 }
 .container{
-    width: 1300px;
-    margin: 0 auto;
+    width: 1200px;
     max-width: 100%;
+    margin: 0 auto;
 }
 .clearfix::after{
     content: "";
-    clear: both;
     display: block;
+    clear: both;
 }
 img{
     max-width: 100%;
 }
-.left{
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.f-left{
     float: left;
 }
-.right{
+.f-right{
     float: right;
 }
 .text-start{
     text-align: left;
 }
-.text-center{
-    text-align: center;
-}
 .text-end{
     text-align: right;
 }
-.ul{
-    list-style: none;
+.text-center{
+    text-align: center;
 }
-a{
-    text-decoration:none;
-}
-/*** Header Section ***/
+/****** Nessesary CSS End ******/
+/****** Header Section Start ******/
 .header{
-    background: #000;   
+    background: black;
 }
-.header-left{
-    width: 20%;
-}
-.header-left img {
-    width: 105px;
-    padding: 10px 0;
-}
-.header-right{
-    width: 80%;
-}
-.header-right ul li{
+.logo img {
+    width: 80px;
     display: inline-block;
-    position: relative;
+    margin-top: 9px;
 }
-.header-right ul li a {
+.menu ul li {
+    display: inline-block;
+    line-height: 62px;
+}
+.menu ul li a {
+    display: inline-block;
     color: #fff;
-    display: inline-block;
-    padding: 10px 30px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 71px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 400;
     position: relative;
 }
-.header-right ul li a:hover{}
-.header-right ul li a::after{
+.menu ul li a::after {
     content: "";
     position: absolute;
-    top: 58px;
-    left: 20%;
-    height: 3px;
+    top: 44px;
+    left: 15%;
+    height: 0;
     width: 0;
     background: #fff;
-    transition: 0.5s;
+    transition: 0.2s;
 }
-.header-right ul li a:hover::after{
-    width: 60%;
+.menu ul li a:hover::after{
+    height: 4%;
+    width: 70%;
+} 
+/****** DropDown Mwnu Start */
+.menu ul li{
+    position: relative;
 }
-.header-right ul li ul{
+.menu ul li ul{
     position: absolute;
     top: 100%;
     left: 0;
-    width: 200px;
-    background: #000;
-    text-align: left;
-    line-height: normal;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: 0.5s;
+    background: black;
+    width: 150px;
 }
-.header-right ul li ul{}
-.header-right ul li ul li{
-    line-height: normal;
+.menu ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+}
+.menu ul li ul li{
     display: block;
 }
+.menu ul li ul li a{
+    display:block;
+
+}
+.dropdown li:nth-child(1){
+    border-top: 2px solid #fff;
+    width: 150px;
+}
+.dropdown li a:hover{
+    background: #fff;
+    color: black;
+    text-decoration: underline;
+ }
+/****** DropDown Mwnu End */
+/****** Header Section End ******/
+/****** Banner Section Strat ******/
+.banner{
+    background: url(./img/a0c6042d4612d7adf44692fffac7e082.jpg) no-repeat top center;
+    background-size: cover;
+    padding: 180px  0;
+}
+
+.banner-text h1 {
+    font-size: 38px;
+    font-weight: 800;
+}
+.banner-text p {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 17px 0;
+}
+.banner-text .btn {
+    display: inline-block;
+    color: #fff;
+    background: black;
+    padding: 20px 25px;
+    border-radius: 16px;
+    font-weight: 500;
+    border: 2px solid #efefeee3;
+    transition: 0.5s;
+    margin-right: 10px;
+}
+.banner-text .btn:hover{
+    background: #fff;
+    color: black;
+    border: 2px solid black;
+    font-weight: 500;
+}
+.banner-text .btn-1{
+    display: inline-block;
+    color: black;
+    background: #fff;
+    padding: 20px 33px;
+    border-radius: 16px;
+    font-weight: 500;
+    transition: 0.5s;
+    margin-left: 10px;
+    border: 2px solid transparent;
+}
+.banner-text .btn-1:hover{
+    background: black;
+    color: #fff;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+/****** Banner Section End ******/
+/****** About Section Strat ******/
+.about{
+    background: #87a471;
+    padding: 20px 0;
+}
+.about h1 {
+    color: #e8dfda;
+    font-size: 45px;
+    position: relative;
+}
+.about h1::after {
+    content: "";
+    position: absolute;
+    top: 63px;
+    left: 40%;
+    height: 4%;
+    width: 20%;
+    background: #e8dfda;
+}
+.about-con{
+    width: 45%;
+}
+.about-con p {
+    margin-top: 135px;
+    color: #e8dfda;
+}
+.about-img img{
+    width: 300px;
+    margin-top: 50px;
+}
+.about-img{
+    width: 45%;
+}
+/****** About Section End ******/
+/****** Service Section Start ******/
+.service {
+    background: #606a64;
+    padding: 40px 0;
+}
+.service-text h1::after{
+    content: "";
+    position: absolute;
+    top: 63px;
+    left: 40%;
+    height: 4%;
+    width: 20%;
+    background: #e8dfda;
+}
+.service-text h1 {
+    color: #e8dfda;
+    font-size: 45px;
+    position: relative;
+}
+.service-text h2 {
+    color: #ddd;
+    font-size: 33px;
+    margin-top: 20px;
+}
+.service-text p {
+    color: #ddd;
+    width: 50%;
+    margin: 16px auto;
+}
+.service-box {
+    background: #fff;
+    width: 32%;
+    padding: 36px 36px;
+    border-radius: 20px;
+    margin-top: 45px;
+    margin-right: 2%;
+}
+.service-box:last-child{
+    margin-right: 0;
+}
+.service-icon {
+    width: 30%;
+    float: left;
+    margin-right: -26px;
+    min-height: 125px;
+}
+.service-icon img {
+    width: 50%;
+}
+.service-content h3 {
+    font-size: 23px;
+    color: #4C6782;
+    margin-bottom: 20px;
+}
+.service-content p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 18px;
+    color: #606a64;
+}
+/****** Service Section End ******/
+/****** Protfolio Section Start ******/
+.protfolio{
+    background: #87a471;
+    padding: 80px 0;
+}
+.p-text h1 {
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: 26px;
+}
+.p-text p {
+    color: #fff;
+}
+.p-box {
+    width: 48%;
+    border: 1px solid #fff;
+    margin-top: 70px;
+}
+.p-box img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.p-box p {
+    margin: 15px 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.p-box span {
+    color: #4C6686;
+}
+.p-box-2 {
+    width: 23.5%;
+    margin-right: 2%;
+    margin-top: 53px;
+}
+.p-box-2:last-child{
+    margin-right: 0;
+}
+.p-box-2 img{
+    width: 100%;
+}
+/****** Protfolio Section End ******/ 
+/****** Team Section Start ******/
+.team {
+    background: #5b9776;
+    padding: 70px 0;
+}
+.team h1 {
+    font-size: 25px;
+    margin-bottom: 44px;
+    color: #fff;
+    position: relative;
+}
+.team h1::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 39%;
+    height: 4%;
+    width: 22%;
+    background: #e8dfda;
+}
+.team-box {
+    width: 32%;
+    margin-right: 2%;
+}
+.team-box:last-child{
+    margin-right: 0;
+}
+.social-menu a {
+	font-size: 30px;
+	display: inline-block;
+	padding: 0 9px;
+	color: #fff;
+	margin: 0 auto;
+    transition0.5s
+}
+.social-menu a:hover {
+	color: #acacace6;
+}
+/****** Team Section End ******/
+/****** Contact Section Start ******/
+.contact{
+    background:#606a64 ;
+    padding: 80px 0;
+}
+.contact h1 {
+    font-size: 30px;
+    color: #fff;
+}
+.contact p {
+    width: 69%;
+    margin: 15px auto;
+    color: #fff;
+}
+.contact .btnn {
+	background: #00bc9c;
+	display: inline-block;
+	padding: 12px 40px;
+	color: #fff;
+	border-radius: 4px;
+	margin-top: 10px;
+	transition: 0.5s;
+}
+.contact .btnn:hover{
+    background: #375264;
+}
+/****** Contact Section End ******/
+/****** Footer Section Strat ******/
+.footer {
+	background: #000000;
+	padding: 25px 0;
+	color: #fff;
+	text-align: center;
+    margin-bottom: 10px ;
+}
+.footer p {
+	font-size: 20px;
+}
+/****** Footer Section End ******/
